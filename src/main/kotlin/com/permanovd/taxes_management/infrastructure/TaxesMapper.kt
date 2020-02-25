@@ -1,9 +1,15 @@
 package com.permanovd.taxes_management.infrastructure
 
-import com.permanovd.taxes_management.domain.TaxesEntry
+import org.apache.ibatis.annotations.Param
+import org.apache.ibatis.annotations.ResultType
 import org.apache.ibatis.annotations.Select
 
 public interface TaxesMapper {
-    @Select("SELECT * FROM source_data")
-    fun getAll(): List<TaxesEntry>?
+    @Select("SELECT \${row} as \${rowAlias}, \${column} as \${columnAlias}, v as value FROM source_data GROUP BY \${row}, \${column}")
+    @ResultType(List::class)
+    fun allAggregated(@Param("column") column: String,
+                      @Param("row") row: String,
+                      @Param("columnAlias") columnAlias: String,
+                      @Param("rowAlias") rowAlias: String
+    ): List<HashMap<String, Any>>?
 }
