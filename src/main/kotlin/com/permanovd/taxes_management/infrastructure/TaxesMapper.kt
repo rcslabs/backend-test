@@ -1,6 +1,5 @@
 package com.permanovd.taxes_management.infrastructure
 
-import com.permanovd.taxes_management.domain.TaxesEntry
 import org.apache.ibatis.annotations.Param
 import org.apache.ibatis.annotations.ResultType
 import org.apache.ibatis.annotations.Select
