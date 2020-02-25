@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  backend-api:
+    build:
+      context: .
+      dockerfile: ./docker/backend/Dockerfile
+    restart: always
+    networks:
+      static-network:
+        ipv4_address: 172.29.128.2
+
+  front:
+    build:
+      context: .
+      dockerfile: ./docker/frontend/Dockerfile
+    networks:
+      static-network:
+        ipv4_address: 172.29.128.1
+
+networks:
+  backend:
+    driver: "bridge"
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.29.0.0/16
