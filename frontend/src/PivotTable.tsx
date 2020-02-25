@@ -103,19 +103,19 @@ class PivotTable extends Component<PivotTableProps, PivotTableState> {
             <div className="form-group row col-6">
                 <label htmlFor="row-select">Row</label>
                 <select className="form-control" id="row-select" value={this.state.controlValues.row} onChange={this.onRowSelectChange} >
-                    <option value="section">section</option>
-                    <option value="type">type</option>
-                    <option value="province">province</option>
-                    <option value="region">region</option>
-                    <option value="year">year</option>
+                    <option value="section">группа налога</option>
+                    <option value="type">подгруппа налога</option>
+                    <option value="province">округ РФ</option>
+                    <option value="region">регион РФ</option>
+                    <option value="year">год</option>
                 </select>
                 <label htmlFor="column-select">Column</label>
                 <select className="form-control" id="column-select" value={this.state.controlValues.column} onChange={this.onColumnSelectChange} >
-                    <option value="section">section</option>
-                    <option value="type">type</option>
-                    <option value="province">province</option>
-                    <option value="region">region</option>
-                    <option value="year">year</option>
+                    <option value="section">группа налога</option>
+                    <option value="type">подгруппа налога</option>
+                    <option value="province">округ РФ</option>
+                    <option value="region">регион РФ</option>
+                    <option value="year">год</option>
                 </select>
 
             </div>
