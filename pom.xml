@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.permanovd</groupId>
     <artifactId>taxes_management</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <version>1.0.1-RELEASE</version>
     <name>taxes_management</name>
     <description>Provides api for taxes management</description>
 
