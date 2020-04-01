@@ -6,7 +6,7 @@ import PivotTable from './PivotTable';
 function App() {
   return (
     <div className="App">
-      <PivotTable apiPath="http://172.29.128.2/api/taxes-aggregated" />
+      <PivotTable apiPath="http://localhost:3000/api/taxes-aggregated" />
     </div>
   );
 }

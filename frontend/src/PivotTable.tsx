@@ -54,6 +54,7 @@ class PivotTable extends Component<PivotTableProps, PivotTableState> {
                     row: this.state.controlValues.row
                 }
             }).then(response => {
+                console.log('get response', response);
                 let table: Map<string, Map<string, number>> = new Map<string, Map<string, number>>();
                 let tableCols = new Array<string>();
                 let tableRows = new Array<string>();
